@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c0qyth6dexe4w"]
+
+[ext_resource type="Texture2D" uid="uid://bm5ifvh8cbe0n" path="res://assets/skills/shield.png" id="1_vtru8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohv3a"]
+atlas = ExtResource("1_vtru8")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e3gf5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohv3a")
+}],
+"loop": true,
+"name": &"shield",
+"speed": 6.0
+}]
+
+[node name="shield" type="Node2D" unique_id=1464502651]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1921230014]
+position = Vector2(2.875002, 6.499999)
+rotation = -0.50022596
+scale = Vector2(0.39257815, 0.3671875)
+sprite_frames = SubResource("SpriteFrames_e3gf5")
+animation = &"shield"
+autoplay = "shield"
+frame_progress = 0.62087154

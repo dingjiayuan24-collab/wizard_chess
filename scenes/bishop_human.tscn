@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://uhh2fdxls3eg"]
+
+[ext_resource type="Script" uid="uid://b323m27yc6hjl" path="res://scripts/piece.gd" id="1_e721k"]
+[ext_resource type="Texture2D" uid="uid://bae4n35fhepxd" path="res://assets/war_chess_plus/human/bishop_human.png" id="1_t1lhr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e721k"]
+atlas = ExtResource("1_t1lhr")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhp7k"]
+atlas = ExtResource("1_t1lhr")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7i4c"]
+atlas = ExtResource("1_t1lhr")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ely67"]
+atlas = ExtResource("1_t1lhr")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dw2ao"]
+atlas = ExtResource("1_t1lhr")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cos8t"]
+atlas = ExtResource("1_t1lhr")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjgri"]
+atlas = ExtResource("1_t1lhr")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3sgd"]
+atlas = ExtResource("1_t1lhr")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5f144"]
+atlas = ExtResource("1_t1lhr")
+region = Rect2(144, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3bv8"]
+atlas = ExtResource("1_t1lhr")
+region = Rect2(192, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jupj0"]
+atlas = ExtResource("1_t1lhr")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghrwy"]
+atlas = ExtResource("1_t1lhr")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymxvq"]
+atlas = ExtResource("1_t1lhr")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f60o0"]
+atlas = ExtResource("1_t1lhr")
+region = Rect2(144, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdhby"]
+atlas = ExtResource("1_t1lhr")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3i4u"]
+atlas = ExtResource("1_t1lhr")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ca6ci"]
+atlas = ExtResource("1_t1lhr")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7a1t1"]
+atlas = ExtResource("1_t1lhr")
+region = Rect2(144, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ke7mr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e721k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhp7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7i4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ely67")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw2ao")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cos8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjgri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3sgd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5f144")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3bv8")
+}],
+"loop": false,
+"name": &"death",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jupj0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghrwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymxvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f60o0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdhby")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3i4u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ca6ci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7a1t1")
+}],
+"loop": true,
+"name": &"run",
+"speed": 9.0
+}]
+
+[node name="bishop_human" type="Node2D" unique_id=1170008901]
+script = ExtResource("1_e721k")
+type = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=242255807]
+position = Vector2(15.000001, -11.000002)
+scale = Vector2(1.3333333, 1.2604167)
+sprite_frames = SubResource("SpriteFrames_ke7mr")
+animation = &"run"
+autoplay = "idle"
+frame_progress = 0.66844267
